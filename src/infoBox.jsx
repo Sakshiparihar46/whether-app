@@ -3,24 +3,18 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import clearImage from './assets/clear.png'
+import RainyImage from './assets/rainy.jpeg'
+import Coldimg from './assets/mist.jpg'
 import './infoBox.css'
 
-export default function InfoBox(){
-    let info={
-        city:"jhansi",
-        feelsLike: 15.51,
-        humidity:36,
-        temp: 16.83,
-        tempMax:16.83,
-        tempMin:16.83,
-        weather:"clear sky"
-    };
+export default function InfoBox({info}){
+    
     return <div className='infoBox'>
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia 
           component="img"
           height="160"
-          image={clearImage}
+          image={info.humidity>70 ? RainyImage:info.temp>20? clearImage:Coldimg}
           alt="clear"
         />
         <CardContent>
