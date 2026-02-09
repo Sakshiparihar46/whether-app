@@ -1,9 +1,9 @@
-
-import SearchBox from './SearchBox';
+import WeatherApp from './weatherApp.jsx';
 function App() {
   
-  return (
-    <SearchBox/>
+  return (<>
+    <WeatherApp/>
+    </>
   )
 }
 
